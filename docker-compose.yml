@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  db:
+    image: "postgres"
+    environment:
+      - POSTGRES_USER=foo
+      - POSTGRES_PASSWORD=bar
+      - POSTGRES_DB=baz
+    ports:
+      - "5432:5432"
+    volumes:
+      - ~/docker/foo_db:/var/lib/postgresql/data/
